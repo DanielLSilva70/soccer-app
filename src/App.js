@@ -2,12 +2,25 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Content from './components/Content';
+import { Routes, Route, Link } from 'react-router-dom';
+import Login from './components/Login';
+import Register from './components/Register';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Content />
+      <Link className="links" to="/Home">Home</Link>
+      <Link className="links" to="/Register" element={<Register/>}>Register</Link>
+      <Link className="links" to="/Login">Login</Link>
+      <Routes>
+      
+        <Route path="/Login" element ={<Login />} />
+        <Route path="/Home" element ={<Content />} />
+        
+        <Route path="/Register" element ={<Register />} />
+      </Routes>
+      
       <Footer />
     </div>
   );

@@ -4,8 +4,9 @@ import '../App.css'
 function Navbar() {
   return (
     <div className="navbar">
-         <h1>Soccer Standings App ⚽</h1>
-
+      
+         <h1 className="navbar">Soccer Standings App ⚽</h1>
+          
     </div>
   )
 }

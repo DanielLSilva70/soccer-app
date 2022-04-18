@@ -128,8 +128,91 @@ body {
   text-align: center;
 }
 
+.container{
+  width: 100%;
+  min-height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-wrapper{
+  background-color: lightgray;
+  min-width: 350px;
+  min-height: 650px;
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.title{
+  text-align: center;
+  margin: 80px 0px 40px 0px;
+}
+
+.name, .email, .password{
+  margin: 20px;
+  color: #969292;
+  font-size: 16px
+}
+
+.password{
+  margin-bottom: 40px;
+}
+
+.input{
+  height: 32px;
+  font-size: 20px;
+  outline: none;
+  width: 100%;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: 2px solid black;
+  margin-bottom: 10px;
+}
+
+.submit{
+  display: flex;
+  text-transform: uppercase;
+  font-size: 20px;
+  border-radius: 25px;
+  color: white;
+  padding: 10px 60px;
+  background-color: #34623F;
+  align-items: center;
+  text-align: center;  
+}
+
+a:link{
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  text-align: center;
+  flex-direction: column;
+  text-decoration: none;
+  padding: 5px;
+  
+ 
+}
+
+a:hover{
+  color:white;
+  font-size: 35px;
+}
+
+a{
+  color:#34623F;
+}
 
 
+
+/* width: 300px;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #34623F;
+color: white;
+height:50px; */
 
 
 
