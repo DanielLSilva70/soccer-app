@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { createUserWithEmailAndPassword, getAuth } from 'firebase/auth';
 import '../components/firebase'
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -11,11 +12,13 @@ export default  function Register() {
     const[password,setPassword] = useState('')
     const [val, setVal] = useState();
 
+    let navigate = useNavigate();
+
     const registerUser = async (e) => {
         e.preventDefault()
         let auth = getAuth();
         try {
-            await createUserWithEmailAndPassword(auth,email, password).then (() => console.log('user created')).catch(e => console.log(e))
+            await createUserWithEmailAndPassword(auth,email, password).then (() => navigate('/Home')).catch(e => console.log(e))
         } catch(error) {
             console.log(error)
         }
@@ -36,16 +39,11 @@ export default  function Register() {
                     <label className="label">Password</label>
                     <input className="input" type="password" name={"password"} value={val} required onChange={(v) => setPassword(v.target.value)}></input>
                 </div>
-                {/* <div className="email">
-                    <label className="label">Password</label>
-                    <input className="input" type="password" name={"password"} required onChange={(v) => setPassword(v.target.value)}></input> */}
-                {/* </div> */}
                 <div>
                     <button className="submit" type='submit'>Sign Up</button>
-                    <button className="submit" type="reset" onClick={() => setVal(() => "")}>Clear</button>
-                    
                 </div>
             </form>
+                    
         </div>
     </div>
   )
